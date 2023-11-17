@@ -4,17 +4,25 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            toDo: ["pasta", "mozzarella", "limoni", "parmigiano", "verdre", "pollo"],
-            done: false
+            toDo: [
+                {
+                    testo: "pasta", done:false
+                }, {
+                    testo: "mozzarella", done:false
+                }, {
+                    testo: "limoni", done:false
+                }, {
+                    testo: "verdure", done:false
+                }, {
+                    testo: "carne", done:false
+                }
+            ],
         }
     },
     methods: {
-        checkClick() {
-            done = !done
-            if (!done) {
-            }
-            console.log(done);
-        }
+        checkClick(i) {
+            this.toDo[i].done = !this.toDo[i].done    
+        },
     }
 }).mount('#app')
 

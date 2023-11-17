@@ -19,3 +19,7 @@ li {
 input {
     margin-left: 10px;
 }
+
+.lineText {
+    text-decoration: line-through;
+}

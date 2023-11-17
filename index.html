@@ -14,9 +14,9 @@
 
     <div id="app">
         <ul class="container">
-            <li v-for="(to, i) in toDo" :key="i">
-                {{ to }}
-                <input type="checkbox" v-model="to.done" @click="checkClick">
+            <li v-for="(to, i) in toDo" :key="i" :class="[to.done ? `lineText` : '']">
+                {{ to.testo }}
+                <input type="checkbox" v-model="to.done" @click="checkClick(i)">
               </li>
         </ul>
 
