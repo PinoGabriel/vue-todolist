@@ -7,13 +7,17 @@ createApp({
             toDo: [
                 {
                     testo: "pasta", done:false
-                }, {
+                }, 
+                {
                     testo: "mozzarella", done:false
-                }, {
+                }, 
+                {
                     testo: "limoni", done:false
-                }, {
+                }, 
+                {
                     testo: "verdure", done:false
-                }, {
+                }, 
+                {
                     testo: "carne", done:false
                 }
             ],
@@ -28,7 +32,9 @@ createApp({
             this.toDo.splice(i, 1)
         },
         addButton(){
-            this.toDo.push({testo: this.nuovoValore, done:false})
+            if (this.toDo.push({testo: this.nuovoValore, done:false})) {
+                this.nuovoValore = ""
+            }
         },
     }
 }).mount('#app')

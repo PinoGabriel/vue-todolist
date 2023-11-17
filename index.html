@@ -32,7 +32,7 @@
             </div>
             <!-- INPUT PER AGGIUNGERE UN NUOVO ELEMENTO ALLA LISTA DELLA SPESA -->
             <div class="newTextInput">
-                <input class="addBtn" type="text" v-model="nuovoValore">
+                <input class="addBtn" type="text" v-model="nuovoValore" @keyup.enter="addButton()">
                 <button class="addBtn btnStyle" @click="addButton()">Aggiungi alla lista</button>
             </div>
 

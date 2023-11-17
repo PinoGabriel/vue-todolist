@@ -34,7 +34,7 @@ li, span {
 
 .x {
     color: red;
-    margin-left: 10px;
+    margin-left: 20px;
     cursor: pointer;
     display: flex;
     flex-direction: column;
