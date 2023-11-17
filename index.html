@@ -14,9 +14,11 @@
 
     <div id="app">
         <ul class="container">
+            <h1>LISTA DELLA SPESA</h1>
             <li v-for="(to, i) in toDo" :key="i" :class="[to.done ? `lineText` : '']">
                 {{ to.testo }}
-                <input type="checkbox" v-model="to.done" @click="checkClick(i)">
+                <input type="checkbox" v-model="to.done" @click="checkClick(i)"> 
+                <span @click="removeClick(i)" class="red">X</span>
               </li>
         </ul>
 

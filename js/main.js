@@ -23,6 +23,9 @@ createApp({
         checkClick(i) {
             this.toDo[i].done = !this.toDo[i].done    
         },
+        removeClick(i) {
+            this.toDo.splice(i, 1)
+        }
     }
 }).mount('#app')
 
