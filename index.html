@@ -14,18 +14,28 @@
 
     <div id="app">
         <div class="container">
+            <!-- TITOLO -->
             <h1>LISTA DELLA SPESA</h1>
-            <ul>
-                <li v-for="(to, i) in toDo" :key="i" :class="[to.done ? `lineText` : '']">
-                    {{ to.testo }}
-                    <input type="checkbox" v-model="to.done" class="checkInput" @click="checkClick(i)">
-                    <span @click="removeClick(i)" class="x">X</span>
-                </li>
-            </ul>
+            <!-- CONTAINER LISTA DELLA SPESA -->
+            <div class="containerElement">
+                <div>
+                    <ul>
+                        <li v-for="(to, i) in toDo" :key="i" :class="[to.done ? `lineText` : '']">
+                            {{ to.testo }}
+                            <input type="checkbox" v-model="to.done" class="checkInput" @click="checkClick(i)">
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span v-for="(to, i) in toDo" @click="removeText(i)" class="x">X</span>
+                </div>
+            </div>
+            <!-- INPUT PER AGGIUNGERE UN NUOVO ELEMENTO ALLA LISTA DELLA SPESA -->
             <div class="newTextInput">
                 <input class="addBtn" type="text" v-model="nuovoValore">
                 <button class="addBtn btnStyle" @click="addButton()">Aggiungi alla lista</button>
             </div>
+
         </div>
 
 

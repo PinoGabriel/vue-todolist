@@ -24,7 +24,7 @@ createApp({
         checkClick(i) {
             this.toDo[i].done = !this.toDo[i].done    
         },
-        removeClick(i) {
+        removeText(i) {
             this.toDo.splice(i, 1)
         },
         addButton(){
