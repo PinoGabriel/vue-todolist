@@ -20,7 +20,7 @@ li {
     margin: 50px auto 0 auto;
 }
 
-input {
+.checkInput {
     margin-left: 10px;
 }
 
@@ -28,8 +28,28 @@ input {
     text-decoration: line-through;
 }
 
-.red {
+.x {
     color: red;
     margin-left: 10px;
+    cursor: pointer;
+}
+
+.lineX {
+    text-decoration: none;
+}
+
+.newTextInput {
+    margin-top: 50px;
+}
+
+.addBtn {
+    padding: 5px;
+    margin-right: 4px;
+}
+
+.btnStyle {
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
     cursor: pointer;
 }

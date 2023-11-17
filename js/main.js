@@ -17,6 +17,7 @@ createApp({
                     testo: "carne", done:false
                 }
             ],
+            nuovoValore: ""
         }
     },
     methods: {
@@ -25,7 +26,10 @@ createApp({
         },
         removeClick(i) {
             this.toDo.splice(i, 1)
-        }
+        },
+        addButton(){
+            this.toDo.push({testo: this.nuovoValore, done:false})
+        },
     }
 }).mount('#app')
 

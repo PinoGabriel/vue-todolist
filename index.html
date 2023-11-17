@@ -13,14 +13,21 @@
 
 
     <div id="app">
-        <ul class="container">
+        <div class="container">
             <h1>LISTA DELLA SPESA</h1>
-            <li v-for="(to, i) in toDo" :key="i" :class="[to.done ? `lineText` : '']">
-                {{ to.testo }}
-                <input type="checkbox" v-model="to.done" @click="checkClick(i)"> 
-                <span @click="removeClick(i)" class="red">X</span>
-              </li>
-        </ul>
+            <ul>
+                <li v-for="(to, i) in toDo" :key="i" :class="[to.done ? `lineText` : '']">
+                    {{ to.testo }}
+                    <input type="checkbox" v-model="to.done" class="checkInput" @click="checkClick(i)">
+                    <span @click="removeClick(i)" class="x">X</span>
+                </li>
+            </ul>
+            <div class="newTextInput">
+                <input class="addBtn" type="text" v-model="nuovoValore">
+                <button class="addBtn btnStyle" @click="addButton()">Aggiungi alla lista</button>
+            </div>
+        </div>
+
 
 
     </div>
